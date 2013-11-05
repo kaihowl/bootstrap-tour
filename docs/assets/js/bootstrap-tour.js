@@ -338,7 +338,7 @@
       };
 
       Tour.prototype._isOrphan = function(step) {
-        return (step.element == null) || !$(step.element).length || $(step.element).is(":hidden");
+        return (step.element == null) || !$(step.element).length || $(step.element).is(":hidden") && ($(step.element)[0].namespaceURI !== "http://www.w3.org/2000/svg");
       };
 
       Tour.prototype._showPopover = function(step, i) {
